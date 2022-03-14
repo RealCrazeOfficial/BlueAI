@@ -1,4 +1,33 @@
-﻿Public Class frmMain
+﻿Imports System.IO
+Imports System.Text
+Imports System.Net
+
+Public Class frmMain
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+
+        Dim currentVersion As Integer = "0211"
+
+        Dim address As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/AI-Solution/master/build-version"
+        Dim client As WebClient = New WebClient()
+        Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
+
+        Dim latestVersion As Integer = reader.ReadToEnd
+
+        Dim versionMatch As String = String.Compare(currentVersion, latestVersion)
+
+        If currentVersion = latestVersion Then
+            lblVersionInfo.Text = "Up to date"
+            lblVersionInfo.ForeColor = Color.Green
+        Else
+            lblVersionInfo.Text = "Outdated"
+            lblVersionInfo.ForeColor = Color.Red
+            btnUpdate.Visible = True
+        End If
+
+    End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
 
@@ -16,6 +45,11 @@
 
         lblPlaceholder.Visible = True
 
+    End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Dim webAddress As String = "https://github.com/XGMCLOLCrazE/AI-Solution/archive/refs/heads/master.zip"
+        Process.Start(webAddress)
     End Sub
 
     Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
