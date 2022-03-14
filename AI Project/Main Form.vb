@@ -8,7 +8,7 @@ Public Class frmMain
 
 
 
-        Dim currentVersion As Integer = "0211"
+        Dim currentVersion As String = "0213"
 
         Dim address As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/AI-Solution/master/build-version"
         Dim client As WebClient = New WebClient()
@@ -19,7 +19,7 @@ Public Class frmMain
         Dim versionMatch As String = String.Compare(currentVersion, latestVersion)
 
         If currentVersion = latestVersion Then
-            lblVersionInfo.Text = "Up to date"
+            lblVersionInfo.Text = "Up to date - " + currentVersion.ToString
             lblVersionInfo.ForeColor = Color.Green
         Else
             lblVersionInfo.Text = "Outdated"
