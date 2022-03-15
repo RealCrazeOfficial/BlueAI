@@ -8,7 +8,7 @@ Public Class frmMain
 
 
 
-        Dim currentVersion As String = "0213"
+        Dim currentVersion As String = "0214"
 
         Dim address As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/AI-Solution/master/build-version"
         Dim client As WebClient = New WebClient()
