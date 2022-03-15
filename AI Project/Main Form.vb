@@ -19,7 +19,7 @@ Public Class frmMain
         Dim versionMatch As String = String.Compare(currentVersion, latestVersion)
 
         If currentVersion = latestVersion Then
-            lblVersionInfo.Text = "Up to date - " + currentVersion.ToString
+            lblVersionInfo.Text = "Up to date"
             lblVersionInfo.ForeColor = Color.Green
         Else
             lblVersionInfo.Text = "Outdated"
@@ -104,11 +104,11 @@ Public Class frmMain
 
         End If
 
+        lblReceivedInput.Text = tbInput.Text
+
         tbInput.ResetText()
 
         pbLoading.Visible = False
-
-        lblReceivedInput.Text = tbInput.Text
 
         Return True
 

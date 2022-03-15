@@ -91,9 +91,11 @@ Partial Class frmMain
         '
         'btnUpdate
         '
+        Me.btnUpdate.BackColor = System.Drawing.SystemColors.HotTrack
         resources.ApplyResources(Me.btnUpdate, "btnUpdate")
+        Me.btnUpdate.ForeColor = System.Drawing.SystemColors.HighlightText
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.UseVisualStyleBackColor = True
+        Me.btnUpdate.UseVisualStyleBackColor = False
         '
         'frmMain
         '
