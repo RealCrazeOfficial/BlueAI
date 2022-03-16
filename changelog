@@ -7,5 +7,3 @@
 + Changed the layout slightly
 
 + Fixed an issue where received input wouldn't be displayed on the bottom-left corner
-
-+ Fixed a potential issue where Windows Defender detected the program as malware
