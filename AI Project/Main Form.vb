@@ -6,25 +6,27 @@ Public Class frmMain
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        Dim currentVersion As String = "022"
 
+        Dim rawVersionURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/AI-Solution/master/version-raw"
+        Dim buildVersionURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/AI-Solution/master/build-version"
 
-        Dim currentVersion As String = "0214"
+        Dim rawVersionText As StreamReader = New StreamReader(New WebClient().OpenRead(rawVersionURL))
+        Dim buildVersionText As StreamReader = New StreamReader(New WebClient().OpenRead(buildVersionURL))
 
-        Dim address As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/AI-Solution/master/build-version"
-        Dim client As WebClient = New WebClient()
-        Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
+        Dim rawLatestVersion As Integer = rawVersionText.ReadToEnd
+        Dim latestVersion As String = buildVersionText.ReadToEnd
 
-        Dim latestVersion As Integer = reader.ReadToEnd
+        Dim versionMatch As String = String.Compare(currentVersion, rawLatestVersion)
 
-        Dim versionMatch As String = String.Compare(currentVersion, latestVersion)
-
-        If currentVersion = latestVersion Then
-            lblVersionInfo.Text = "Up to date"
-            lblVersionInfo.ForeColor = Color.Green
+        If currentVersion = rawLatestVersion Then
+            frmSettings.lblVersionInfo.Text = "You are up to date"
+            frmSettings.lblVersionInfo.ForeColor = Color.Green
         Else
-            lblVersionInfo.Text = "Outdated"
-            lblVersionInfo.ForeColor = Color.Red
-            btnUpdate.Visible = True
+            frmSettings.lblVersionInfo.Text = "An update is available"
+            frmSettings.lblVersionInfo.ForeColor = Color.Red
+            pbUpdateIcon.Visible = True
+            frmSettings.btnUpdate.Enabled = True
         End If
 
     End Sub
@@ -47,9 +49,10 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        Dim webAddress As String = "https://github.com/XGMCLOLCrazE/AI-Solution/archive/refs/heads/master.zip"
-        Process.Start(webAddress)
+    Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
+
+        frmSettings.ShowDialog()
+
     End Sub
 
     Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
@@ -59,9 +62,20 @@ Public Class frmMain
     End Sub
 
     Private Sub tbInput_KeyDown(sender As Object, e As KeyEventArgs) Handles tbInput.KeyDown
+
         If e.KeyCode = Keys.Enter Then
+
             LoadResponse()
+
         End If
+
+        If e.KeyCode = Keys.Up Then
+
+            tbInput.Text = lblReceivedInput.Text
+            My.Computer.Keyboard.SendKeys("{END}")
+
+        End If
+
     End Sub
 
     Function LoadResponse()
@@ -73,6 +87,12 @@ Public Class frmMain
             "I don't have the knowledge to answer that yet, sorry.",
             "I can't find the answer to that, sorry.",
             "That is beyond my limitations right now, sorry."
+        }
+
+        Dim noInput() As String = {
+            "You didn't say anything.",
+            "You didn't type anything.",
+            "Did you say something?"
         }
 
         Dim timeResponse() As String = {
@@ -93,15 +113,17 @@ Public Class frmMain
 
         If tbInputFormatted.Contains("what") Then
             If tbInputFormatted.Contains("time") Then
-                lblResponse.Text = timeResponse(Rnd.Next(0, 2))
+                lblResponse.Text = timeResponse(Rnd.Next(0, 3))
                 boolResponse = True
             End If
         End If
 
         If boolResponse = False Then
-
-            lblResponse.Text = unknownResponse(Rnd.Next(0, 3))
-
+            If tbInputFormatted = "" Then
+                lblResponse.Text = noInput(Rnd.Next(0, 3))
+            Else
+                lblResponse.Text = unknownResponse(Rnd.Next(0, 3))
+            End If
         End If
 
         lblReceivedInput.Text = tbInput.Text

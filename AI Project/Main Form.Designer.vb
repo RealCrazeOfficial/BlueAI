@@ -30,8 +30,9 @@ Partial Class frmMain
         Me.btnSend = New System.Windows.Forms.Button()
         Me.lblReceivedInput = New System.Windows.Forms.Label()
         Me.pbLoading = New System.Windows.Forms.ProgressBar()
-        Me.lblVersionInfo = New System.Windows.Forms.Label()
-        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnSettings = New System.Windows.Forms.Button()
+        Me.pbUpdateIcon = New System.Windows.Forms.PictureBox()
+        CType(Me.pbUpdateIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnExit
@@ -83,26 +84,26 @@ Partial Class frmMain
         Me.pbLoading.Step = 1
         Me.pbLoading.Style = System.Windows.Forms.ProgressBarStyle.Marquee
         '
-        'lblVersionInfo
+        'btnSettings
         '
-        Me.lblVersionInfo.ForeColor = System.Drawing.Color.Red
-        resources.ApplyResources(Me.lblVersionInfo, "lblVersionInfo")
-        Me.lblVersionInfo.Name = "lblVersionInfo"
+        resources.ApplyResources(Me.btnSettings, "btnSettings")
+        Me.btnSettings.Name = "btnSettings"
+        Me.btnSettings.UseVisualStyleBackColor = True
         '
-        'btnUpdate
+        'pbUpdateIcon
         '
-        Me.btnUpdate.BackColor = System.Drawing.SystemColors.HotTrack
-        resources.ApplyResources(Me.btnUpdate, "btnUpdate")
-        Me.btnUpdate.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.UseVisualStyleBackColor = False
+        resources.ApplyResources(Me.pbUpdateIcon, "pbUpdateIcon")
+        Me.pbUpdateIcon.Image = Global.AI_Project.My.Resources.Resources.updateIcon
+        Me.pbUpdateIcon.Name = "pbUpdateIcon"
+        Me.pbUpdateIcon.TabStop = False
         '
         'frmMain
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.btnUpdate)
-        Me.Controls.Add(Me.lblVersionInfo)
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.Controls.Add(Me.pbUpdateIcon)
+        Me.Controls.Add(Me.btnSettings)
         Me.Controls.Add(Me.pbLoading)
         Me.Controls.Add(Me.lblReceivedInput)
         Me.Controls.Add(Me.btnSend)
@@ -113,6 +114,7 @@ Partial Class frmMain
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "frmMain"
+        CType(Me.pbUpdateIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -125,6 +127,6 @@ Partial Class frmMain
     Friend WithEvents btnSend As Button
     Friend WithEvents lblReceivedInput As Label
     Friend WithEvents pbLoading As ProgressBar
-    Friend WithEvents lblVersionInfo As Label
-    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnSettings As Button
+    Friend WithEvents pbUpdateIcon As PictureBox
 End Class
