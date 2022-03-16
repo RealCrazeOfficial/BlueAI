@@ -1,12 +1,13 @@
 ﻿Imports System.IO
 Imports System.Text
 Imports System.Net
+Imports System.Text.RegularExpressions
 
 Public Class frmMain
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim currentVersion As String = "023"
+        Dim currentVersion As String = "024"
 
         Dim rawVersionURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/AI-Solution/master/version-raw"
         Dim buildVersionURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/AI-Solution/master/build-version"
@@ -82,6 +83,8 @@ Public Class frmMain
 
         pbLoading.Visible = True
 
+        ' Multi-Response
+
         Dim unknownResponse() As String = {
             "I don't know the answer to that, sorry.",
             "I don't have the knowledge to answer that yet, sorry.",
@@ -89,7 +92,7 @@ Public Class frmMain
             "That is beyond my limitations right now, sorry."
         }
 
-        Dim noInput() As String = {
+        Dim noInputResponse() As String = {
             "You didn't say anything.",
             "You didn't type anything.",
             "Did you say something?"
@@ -99,6 +102,25 @@ Public Class frmMain
             "It's currently " + DateTime.Now.ToString("h:mm tt") + ".",
             "The time is " + DateTime.Now.ToString("h:mm tt") + ".",
             "It's " + DateTime.Now.ToString("h:mm tt") + " right now."
+        }
+
+        Dim greetingResponse() As String = {
+            "Hello, is there anything I can do for you?",
+            "Hi, is there anything I can help you with?"
+        }
+
+        Dim abilityResponse() As String = {
+            "I'm still limited on what I can do, so unfortunately, I can't",
+            "I'm still learning, so unfortunately I can't do that yet.",
+            "I can't do that yet, but I might be able to in the future."
+        }
+
+        ' Array Input Checks
+
+        Dim greetingInput() As String = {
+            "hi",
+            "hello",
+            "hey"
         }
 
         Dim tbInputFormatted As String
@@ -116,13 +138,35 @@ Public Class frmMain
                 lblResponse.Text = timeResponse(Rnd.Next(0, 3))
                 boolResponse = True
             End If
+        ElseIf tbInputFormatted.Contains("can you") Then
+            If Rnd.Next(0, 3) = 1 Then
+                tbInputFormatted = Regex.Replace(tbInputFormatted, "\bcan you\b", String.Empty)
+                tbInputFormatted = Regex.Replace(tbInputFormatted, "\bme\b", "y0u")
+                If tbInputFormatted.Contains("you will") Then
+                    tbInputFormatted = Regex.Replace(tbInputFormatted, "\byou\b", "I")
+                Else
+                    tbInputFormatted = Regex.Replace(tbInputFormatted, "\byou\b", "I'm")
+                End If
+                tbInputFormatted = Regex.Replace(tbInputFormatted, "\by0u\b", "you")
+                tbInputFormatted = Regex.Replace(tbInputFormatted, "\baren't\b", "not")
+                tbInputFormatted = Regex.Replace(tbInputFormatted, "\b yet\b", String.Empty)
+                tbInputFormatted = Regex.Replace(tbInputFormatted, "\b are\b", String.Empty)
+                lblResponse.Text = abilityResponse(0) + tbInputFormatted + " yet."
+                boolResponse = True
+            Else
+                lblResponse.Text = abilityResponse(Rnd.Next(2, 3))
+                boolResponse = True
+            End If
+        ElseIf greetingInput.Contains(tbInputFormatted) Then
+            lblResponse.Text = greetingResponse(Rnd.Next(0, 2))
+            boolResponse = True
         End If
 
         If boolResponse = False Then
             If tbInputFormatted = "" Then
-                lblResponse.Text = noInput(Rnd.Next(0, 3))
+                lblResponse.Text = noInputResponse(Rnd.Next(0, 3))
             Else
-                lblResponse.Text = unknownResponse(Rnd.Next(0, 3))
+                lblResponse.Text = unknownResponse(Rnd.Next(0, 4))
             End If
         End If
 

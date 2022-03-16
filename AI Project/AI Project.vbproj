@@ -72,13 +72,13 @@
     <DelaySign>false</DelaySign>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>false</SignManifests>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>C697B04C0BD3530C197F7B9336814C7904F0FE61</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>EC02B15A0368EBE29B264730AB2AA66425AD67F5</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>AI Project_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>AI Project_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -151,6 +151,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="AI Project_1_TemporaryKey.pfx" />
     <None Include="AI Project_TemporaryKey.pfx" />
     <None Include="AI Solution.pfx" />
     <None Include="My Project\Application.myapp">

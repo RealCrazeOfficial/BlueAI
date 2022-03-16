@@ -1553,7 +1553,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>AI System - Build 0.2.3</value>
+    <value>AI System - Build 0.2.4</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMain</value>
