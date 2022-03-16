@@ -4,6 +4,8 @@
 
 + Added responses for when no input is entered
 
++ Added responses for when you ask if the AI can do something that it can't
+
 + Changed the layout slightly
 
 + Fixed an issue where received input wouldn't be displayed on the bottom-left corner
