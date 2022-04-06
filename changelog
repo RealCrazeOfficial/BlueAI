@@ -1,11 +1,11 @@
-+ Added a settings menu
++ Added automatic feedback submissions. Go to Settings and hover over the setting for more information.
 
-+ Added a shortcut where you can input your last input by pressing the up arrow on your keyboard
++ Added commands (say "/help")
 
-+ Added responses for when no input is entered
++ Added a few grammatical fixes when you ask the A.I. to tell someone something
 
-+ Added responses for when you ask if the AI can do something that it can't
++ Changed the response text font
 
-+ Changed the layout slightly
++ Changed asking the A.I. to tell someone something into a beta feature
 
-+ Fixed an issue where received input wouldn't be displayed on the bottom-left corner
++ Moved changelogs to its own menu
