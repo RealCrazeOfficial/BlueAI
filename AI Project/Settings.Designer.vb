@@ -22,99 +22,54 @@ Partial Class frmSettings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.lblVersionInfo = New System.Windows.Forms.Label()
-        Me.btnUpdate = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblChangelogTitle = New System.Windows.Forms.Label()
-        Me.lblChangelog = New System.Windows.Forms.Label()
+        Me.cbFeedbackSubmission = New System.Windows.Forms.CheckBox()
+        Me.ttFeedbackSubmission = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(397, 226)
+        Me.btnExit.Location = New System.Drawing.Point(397, 217)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 23)
-        Me.btnExit.TabIndex = 1
+        Me.btnExit.TabIndex = 0
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
-        'lblVersionInfo
+        'cbFeedbackSubmission
         '
-        Me.lblVersionInfo.AutoSize = True
-        Me.lblVersionInfo.ForeColor = System.Drawing.Color.Red
-        Me.lblVersionInfo.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.lblVersionInfo.Location = New System.Drawing.Point(279, 199)
-        Me.lblVersionInfo.Name = "lblVersionInfo"
-        Me.lblVersionInfo.Size = New System.Drawing.Size(111, 13)
-        Me.lblVersionInfo.TabIndex = 7
-        Me.lblVersionInfo.Text = "An update is available"
-        Me.lblVersionInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.cbFeedbackSubmission.Location = New System.Drawing.Point(12, 12)
+        Me.cbFeedbackSubmission.Name = "cbFeedbackSubmission"
+        Me.cbFeedbackSubmission.Size = New System.Drawing.Size(460, 17)
+        Me.cbFeedbackSubmission.TabIndex = 1
+        Me.cbFeedbackSubmission.Text = "Automatically Submit Feedback"
+        Me.ttFeedbackSubmission.SetToolTip(Me.cbFeedbackSubmission, "When the A.I. doesn't know the answer to your question, it'll automatically be se" &
+        "nt for review so that the A.I. can gain knowledge of the question.")
+        Me.cbFeedbackSubmission.UseVisualStyleBackColor = True
         '
-        'btnUpdate
+        'ttFeedbackSubmission
         '
-        Me.btnUpdate.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.btnUpdate.Enabled = False
-        Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnUpdate.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.btnUpdate.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.btnUpdate.Location = New System.Drawing.Point(396, 194)
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
-        Me.btnUpdate.TabIndex = 8
-        Me.btnUpdate.Text = "&Update"
-        Me.btnUpdate.UseVisualStyleBackColor = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 13)
-        Me.Label1.TabIndex = 9
-        '
-        'lblChangelogTitle
-        '
-        Me.lblChangelogTitle.Location = New System.Drawing.Point(12, 9)
-        Me.lblChangelogTitle.Name = "lblChangelogTitle"
-        Me.lblChangelogTitle.Size = New System.Drawing.Size(261, 13)
-        Me.lblChangelogTitle.TabIndex = 10
-        Me.lblChangelogTitle.Text = "ERROR"
-        Me.lblChangelogTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblChangelogTitle.UseMnemonic = False
-        '
-        'lblChangelog
-        '
-        Me.lblChangelog.Location = New System.Drawing.Point(12, 34)
-        Me.lblChangelog.Name = "lblChangelog"
-        Me.lblChangelog.Size = New System.Drawing.Size(261, 215)
-        Me.lblChangelog.TabIndex = 11
-        Me.lblChangelog.Text = "ERROR"
+        Me.ttFeedbackSubmission.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        Me.ttFeedbackSubmission.ToolTipTitle = "Automatically Submit Feedback"
         '
         'frmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(484, 261)
-        Me.Controls.Add(Me.lblChangelog)
-        Me.Controls.Add(Me.lblChangelogTitle)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnUpdate)
-        Me.Controls.Add(Me.lblVersionInfo)
+        Me.ClientSize = New System.Drawing.Size(484, 245)
+        Me.Controls.Add(Me.cbFeedbackSubmission)
         Me.Controls.Add(Me.btnExit)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "frmSettings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "AI System Settings"
+        Me.Text = "Settings"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
+
     Friend WithEvents btnExit As Button
-    Friend WithEvents lblVersionInfo As Label
-    Friend WithEvents btnUpdate As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents lblChangelogTitle As Label
-    Friend WithEvents lblChangelog As Label
+    Friend WithEvents cbFeedbackSubmission As CheckBox
+    Friend WithEvents ttFeedbackSubmission As ToolTip
 End Class

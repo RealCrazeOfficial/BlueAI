@@ -63,16 +63,17 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>AI Solution.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <DelaySign>false</DelaySign>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>EC02B15A0368EBE29B264730AB2AA66425AD67F5</ManifestCertificateThumbprint>
@@ -112,6 +113,12 @@
     <Compile Include="Settings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Whats New.Designer.vb">
+      <DependentUpon>Whats New.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Whats New.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Main Form.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -149,15 +156,16 @@
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Whats New.resx">
+      <DependentUpon>Whats New.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="AI Project_1_TemporaryKey.pfx" />
-    <None Include="AI Project_TemporaryKey.pfx" />
-    <None Include="AI Solution.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\frmSettings.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
@@ -176,9 +184,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\clouddown_icon-icons.com_54405.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\updateIcon.png" />

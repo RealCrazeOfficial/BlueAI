@@ -22,6 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.btnExit = New System.Windows.Forms.Button()
         Me.tbInput = New System.Windows.Forms.TextBox()
@@ -30,8 +31,12 @@ Partial Class frmMain
         Me.btnSend = New System.Windows.Forms.Button()
         Me.lblReceivedInput = New System.Windows.Forms.Label()
         Me.pbLoading = New System.Windows.Forms.ProgressBar()
-        Me.btnSettings = New System.Windows.Forms.Button()
+        Me.btnChangelogs = New System.Windows.Forms.Button()
         Me.pbUpdateIcon = New System.Windows.Forms.PictureBox()
+        Me.btnSettings = New System.Windows.Forms.Button()
+        Me.lblFeedbackSubmission = New System.Windows.Forms.Label()
+        Me.tmrFeedbackSubmissionSuccess = New System.Windows.Forms.Timer(Me.components)
+        Me.tmrFeedbackSubmissionFailed = New System.Windows.Forms.Timer(Me.components)
         CType(Me.pbUpdateIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -84,11 +89,11 @@ Partial Class frmMain
         Me.pbLoading.Step = 1
         Me.pbLoading.Style = System.Windows.Forms.ProgressBarStyle.Marquee
         '
-        'btnSettings
+        'btnChangelogs
         '
-        resources.ApplyResources(Me.btnSettings, "btnSettings")
-        Me.btnSettings.Name = "btnSettings"
-        Me.btnSettings.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.btnChangelogs, "btnChangelogs")
+        Me.btnChangelogs.Name = "btnChangelogs"
+        Me.btnChangelogs.UseVisualStyleBackColor = True
         '
         'pbUpdateIcon
         '
@@ -97,13 +102,35 @@ Partial Class frmMain
         Me.pbUpdateIcon.Name = "pbUpdateIcon"
         Me.pbUpdateIcon.TabStop = False
         '
+        'btnSettings
+        '
+        resources.ApplyResources(Me.btnSettings, "btnSettings")
+        Me.btnSettings.Name = "btnSettings"
+        Me.btnSettings.UseVisualStyleBackColor = True
+        '
+        'lblFeedbackSubmission
+        '
+        Me.lblFeedbackSubmission.ForeColor = System.Drawing.Color.ForestGreen
+        resources.ApplyResources(Me.lblFeedbackSubmission, "lblFeedbackSubmission")
+        Me.lblFeedbackSubmission.Name = "lblFeedbackSubmission"
+        '
+        'tmrFeedbackSubmissionSuccess
+        '
+        Me.tmrFeedbackSubmissionSuccess.Interval = 2000
+        '
+        'tmrFeedbackSubmissionFailed
+        '
+        Me.tmrFeedbackSubmissionFailed.Interval = 10000
+        '
         'frmMain
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.Controls.Add(Me.pbUpdateIcon)
+        Me.Controls.Add(Me.lblFeedbackSubmission)
         Me.Controls.Add(Me.btnSettings)
+        Me.Controls.Add(Me.pbUpdateIcon)
+        Me.Controls.Add(Me.btnChangelogs)
         Me.Controls.Add(Me.pbLoading)
         Me.Controls.Add(Me.lblReceivedInput)
         Me.Controls.Add(Me.btnSend)
@@ -127,6 +154,10 @@ Partial Class frmMain
     Friend WithEvents btnSend As Button
     Friend WithEvents lblReceivedInput As Label
     Friend WithEvents pbLoading As ProgressBar
-    Friend WithEvents btnSettings As Button
+    Friend WithEvents btnChangelogs As Button
     Friend WithEvents pbUpdateIcon As PictureBox
+    Friend WithEvents btnSettings As Button
+    Friend WithEvents lblFeedbackSubmission As Label
+    Friend WithEvents tmrFeedbackSubmissionSuccess As Timer
+    Friend WithEvents tmrFeedbackSubmissionFailed As Timer
 End Class

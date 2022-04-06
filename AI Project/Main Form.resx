@@ -133,7 +133,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="btnExit.Text" xml:space="preserve">
     <value>E&amp;xit</value>
@@ -148,7 +148,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <metadata name="tbInput.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -163,7 +163,7 @@
     <value>460, 20</value>
   </data>
   <data name="tbInput.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;tbInput.Name" xml:space="preserve">
     <value>tbInput</value>
@@ -175,7 +175,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbInput.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <metadata name="lblPlaceholder.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -193,7 +193,7 @@
     <value>446, 13</value>
   </data>
   <data name="lblPlaceholder.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="lblPlaceholder.Text" xml:space="preserve">
     <value>Enter Input</value>
@@ -208,7 +208,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblPlaceholder.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <metadata name="lblResponse.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -217,7 +217,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="lblResponse.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="lblResponse.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -247,7 +247,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblResponse.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <metadata name="btnSend.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -265,7 +265,7 @@
     <value>2</value>
   </data>
   <data name="btnSend.Text" xml:space="preserve">
-    <value>Send</value>
+    <value>&amp;Send</value>
   </data>
   <data name="&gt;&gt;btnSend.Name" xml:space="preserve">
     <value>btnSend</value>
@@ -277,7 +277,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSend.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <metadata name="lblReceivedInput.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -285,11 +285,14 @@
   <data name="lblReceivedInput.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
+  <data name="lblReceivedInput.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt, style=Bold</value>
+  </data>
   <data name="lblReceivedInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 236</value>
   </data>
   <data name="lblReceivedInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 13</value>
+    <value>275, 13</value>
   </data>
   <data name="lblReceivedInput.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -307,7 +310,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblReceivedInput.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <metadata name="pbLoading.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -337,40 +340,40 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pbLoading.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
-  <metadata name="btnSettings.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="btnChangelogs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="btnSettings.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="btnChangelogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="btnSettings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnChangelogs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnSettings.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnChangelogs.Location" type="System.Drawing.Point, System.Drawing">
     <value>397, 197</value>
   </data>
-  <data name="btnSettings.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnChangelogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="btnChangelogs.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="btnSettings.Text" xml:space="preserve">
-    <value>&amp;Settings</value>
+  <data name="btnChangelogs.Text" xml:space="preserve">
+    <value>&amp;What's New</value>
   </data>
-  <data name="&gt;&gt;btnSettings.Name" xml:space="preserve">
-    <value>btnSettings</value>
+  <data name="&gt;&gt;btnChangelogs.Name" xml:space="preserve">
+    <value>btnChangelogs</value>
   </data>
-  <data name="&gt;&gt;btnSettings.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnChangelogs.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnSettings.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnChangelogs.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnSettings.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;btnChangelogs.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <metadata name="pbUpdateIcon.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -403,8 +406,77 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pbUpdateIcon.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="btnSettings.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btnSettings.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btnSettings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 168</value>
+  </data>
+  <data name="btnSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnSettings.Text" xml:space="preserve">
+    <value>S&amp;ettings</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.Name" xml:space="preserve">
+    <value>btnSettings</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblFeedbackSubmission.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblFeedbackSubmission.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 139</value>
+  </data>
+  <data name="lblFeedbackSubmission.Size" type="System.Drawing.Size, System.Drawing">
+    <value>378, 23</value>
+  </data>
+  <data name="lblFeedbackSubmission.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lblFeedbackSubmission.Text" xml:space="preserve">
+    <value>Sending...</value>
+  </data>
+  <data name="lblFeedbackSubmission.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblFeedbackSubmission.Name" xml:space="preserve">
+    <value>lblFeedbackSubmission</value>
+  </data>
+  <data name="&gt;&gt;lblFeedbackSubmission.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblFeedbackSubmission.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblFeedbackSubmission.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="tmrFeedbackSubmissionSuccess.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="tmrFeedbackSubmissionFailed.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>235, 22</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1553,7 +1625,19 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>AI System - Build 0.2.4</value>
+    <value>AI System - Build 0.3.0</value>
+  </data>
+  <data name="&gt;&gt;tmrFeedbackSubmissionSuccess.Name" xml:space="preserve">
+    <value>tmrFeedbackSubmissionSuccess</value>
+  </data>
+  <data name="&gt;&gt;tmrFeedbackSubmissionSuccess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tmrFeedbackSubmissionFailed.Name" xml:space="preserve">
+    <value>tmrFeedbackSubmissionFailed</value>
+  </data>
+  <data name="&gt;&gt;tmrFeedbackSubmissionFailed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMain</value>

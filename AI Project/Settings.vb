@@ -1,26 +1,16 @@
-﻿Imports System.IO
-Imports System.Text
-Imports System.Net
-
-Public Class frmSettings
+﻿Public Class frmSettings
 
     Private Sub frmSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim changelogURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/AI-Solution/master/changelog"
-        Dim buildVersionURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/AI-Solution/master/build-version"
-        Dim client As WebClient = New WebClient()
+        If My.Settings.feedbackSubmission = True Then
 
-        Dim changelogText As StreamReader = New StreamReader(client.OpenRead(changelogURL))
-        Dim buildVersionText As StreamReader = New StreamReader(client.OpenRead(buildVersionURL))
+            cbFeedbackSubmission.Checked = True
 
-        Dim changelog As String = changelogText.ReadToEnd
-        Dim buildVersion As String = buildVersionText.ReadToEnd
+        Else
 
-        Dim buildVersionFormatted As String = buildVersion.Replace(vbCr, "").Replace(vbLf, "")
+            cbFeedbackSubmission.Checked = False
 
-        lblChangelogTitle.Text = "What's New in " + buildVersionFormatted + ":"
-        lblChangelog.Text = changelog
-
+        End If
 
     End Sub
 
@@ -30,10 +20,17 @@ Public Class frmSettings
 
     End Sub
 
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+    Private Sub cbFeedbackSubmission_CheckedChanged(sender As Object, e As EventArgs) Handles cbFeedbackSubmission.CheckedChanged
 
-        Dim webAddress As String = "https://github.com/XGMCLOLCrazE/AI-Solution/archive/refs/heads/master.zip"
-        Process.Start(webAddress)
+        If cbFeedbackSubmission.Checked = True Then
+
+            My.Settings.feedbackSubmission = True
+
+        Else
+
+            My.Settings.feedbackSubmission = False
+
+        End If
 
     End Sub
 
