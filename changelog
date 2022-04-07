@@ -4,9 +4,17 @@
 
 + Added a few grammatical fixes when you ask the A.I. to tell someone something
 
++ Changed the name of the A.I.
+
 + Changed the application icon
 
++ Changed the title of all windows to accommodate the A.I. name changes  
+
 + Changed the response text font
+
++ Changed the changelogs text font
+
++ Changed the feedback submission text font on the main application window
 
 + Changed asking the A.I. to tell someone something into a beta feature
 
