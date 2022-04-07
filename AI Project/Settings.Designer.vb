@@ -23,6 +23,7 @@ Partial Class frmSettings
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSettings))
         Me.btnExit = New System.Windows.Forms.Button()
         Me.cbFeedbackSubmission = New System.Windows.Forms.CheckBox()
         Me.ttFeedbackSubmission = New System.Windows.Forms.ToolTip(Me.components)
@@ -61,6 +62,7 @@ Partial Class frmSettings
         Me.Controls.Add(Me.cbFeedbackSubmission)
         Me.Controls.Add(Me.btnExit)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frmSettings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

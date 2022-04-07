@@ -104,6 +104,7 @@ Partial Class frmWhatsNew
         Me.Controls.Add(Me.lblVersionInfo)
         Me.Controls.Add(Me.btnExit)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frmWhatsNew"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
