@@ -8,7 +8,7 @@ Imports System.Collections.Specialized
 
 Public Class frmMain
 
-    Private Const currentVersion As String = "031"
+    Private Const currentVersion As String = "032"
     Private Const rawVersionURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/AI-Solution/master/version-raw"
     Private ReadOnly rawVersionText As New StreamReader(New WebClient().OpenRead(rawVersionURL))
     Private ReadOnly rawLatestVersion As Integer = rawVersionText.ReadToEnd

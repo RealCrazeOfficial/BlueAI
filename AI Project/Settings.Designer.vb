@@ -66,7 +66,7 @@ Partial Class frmSettings
         Me.MaximizeBox = False
         Me.Name = "frmSettings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Settings"
+        Me.Text = "BlueAI Settings"
         Me.ResumeLayout(False)
 
     End Sub

@@ -110,8 +110,8 @@ Partial Class frmMain
         '
         'lblFeedbackSubmission
         '
-        Me.lblFeedbackSubmission.ForeColor = System.Drawing.Color.ForestGreen
         resources.ApplyResources(Me.lblFeedbackSubmission, "lblFeedbackSubmission")
+        Me.lblFeedbackSubmission.ForeColor = System.Drawing.Color.ForestGreen
         Me.lblFeedbackSubmission.Name = "lblFeedbackSubmission"
         '
         'tmrFeedbackSubmissionSuccess
