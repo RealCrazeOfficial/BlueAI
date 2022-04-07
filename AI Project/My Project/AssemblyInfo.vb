@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("AI Project")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("AI Project")>
+<Assembly: AssemblyTitle("BlueAI")>
+<Assembly: AssemblyDescription("An A.I. virtual assistant for Windows.")>
+<Assembly: AssemblyCompany("RealCraze Projects")>
+<Assembly: AssemblyProduct("Virtual Assistant")>
 <Assembly: AssemblyCopyright("Copyright ©  2022")>
 <Assembly: AssemblyTrademark("")>
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("0.3.2.0")>
 <Assembly: AssemblyFileVersion("1.0.0.0")>

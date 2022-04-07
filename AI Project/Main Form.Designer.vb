@@ -98,7 +98,7 @@ Partial Class frmMain
         'pbUpdateIcon
         '
         resources.ApplyResources(Me.pbUpdateIcon, "pbUpdateIcon")
-        Me.pbUpdateIcon.Image = Global.AI_Project.My.Resources.Resources.updateIcon
+        Me.pbUpdateIcon.Image = Global.BlueAI.My.Resources.Resources.updateIcon
         Me.pbUpdateIcon.Name = "pbUpdateIcon"
         Me.pbUpdateIcon.TabStop = False
         '

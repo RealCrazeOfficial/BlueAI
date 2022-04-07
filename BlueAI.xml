@@ -2,27 +2,27 @@
 <doc>
 <assembly>
 <name>
-AI Project
+BlueAI
 </name>
 </assembly>
 <members>
-<member name="T:AI_Project.My.Resources.Resources">
+<member name="T:BlueAI.My.Resources.Resources">
 <summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member>
-<member name="P:AI_Project.My.Resources.Resources.ResourceManager">
+<member name="P:BlueAI.My.Resources.Resources.ResourceManager">
 <summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
 </member>
-<member name="P:AI_Project.My.Resources.Resources.Culture">
+<member name="P:BlueAI.My.Resources.Resources.Culture">
 <summary>
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="P:AI_Project.My.Resources.Resources.updateIcon">
+<member name="P:BlueAI.My.Resources.Resources.updateIcon">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
