@@ -89,6 +89,7 @@ Partial Class frmWhatsNew
         '
         'lblChangelog
         '
+        Me.lblChangelog.AutoSize = True
         Me.lblChangelog.BackColor = System.Drawing.SystemColors.Control
         Me.lblChangelog.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblChangelog.Location = New System.Drawing.Point(-3, 0)
@@ -126,6 +127,7 @@ Partial Class frmWhatsNew
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "BlueAI Changelogs"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
