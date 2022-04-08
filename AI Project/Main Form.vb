@@ -8,15 +8,15 @@ Imports System.Collections.Specialized
 
 Public Class frmMain
 
-    Private Const currentVersion As String = "033"
-    Private Const rawVersionURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/AI-Solution/master/version-raw"
+    Private Const currentVersion As String = "034"
+    Private Const rawVersionURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/BlueAI/master/version-raw"
     Private ReadOnly rawVersionText As New StreamReader(New WebClient().OpenRead(rawVersionURL))
     Private ReadOnly rawLatestVersion As Integer = rawVersionText.ReadToEnd
     Private updateNotified As Boolean = False
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim buildVersionURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/AI-Solution/master/build-version"
+        Dim buildVersionURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/BlueAI/master/build-version"
 
         Dim buildVersionText As New StreamReader(New WebClient().OpenRead(buildVersionURL))
 
@@ -143,10 +143,17 @@ Public Class frmMain
         Dim greetingInput() As String = {
             "hi",
             "hello",
-            "hey"
+            "hey",
+            "whats up",
+            "sup",
+            "howdy",
+            "wassup",
+            "greetings"
         }
 
         Dim tbInputFormatted As String
+
+        Dim tbInputArgs As Array
 
         Dim boolResponse As Boolean
 
@@ -158,6 +165,7 @@ Public Class frmMain
 
         tbInputFormatted = tbInput.Text.ToLower()
         tbInputFormatted = Regex.Replace(tbInputFormatted, "[`~!@#$^&()_{}|;:'<.>?]", String.Empty)
+        tbInputArgs = tbInputFormatted.Split(" ")
 
         ' Main AI Function
 
@@ -197,9 +205,7 @@ Public Class frmMain
 
             If My.Settings.betaTell = True Then
 
-                Dim startPosition As Integer = tbInputFormatted.IndexOf(" ") + 1
-                Dim inputName As String = tbInputFormatted.Substring(startPosition, tbInputFormatted.IndexOf(" ", startPosition) - startPosition)
-                tbInputFormatted = Regex.Replace(tbInputFormatted, "\b" + inputName + " \b", String.Empty)
+                tbInputFormatted = Regex.Replace(tbInputFormatted, "\b" + tbInputArgs(1) + " \b", String.Empty)
                 tbInputFormatted = Regex.Replace(tbInputFormatted, "\btell \b", String.Empty)
                 tbInputFormatted = Regex.Replace(tbInputFormatted, "\bask \b", String.Empty)
                 tbInputFormatted = Regex.Replace(tbInputFormatted, "\bthat \b", String.Empty)
@@ -227,7 +233,7 @@ Public Class frmMain
                 tbInputFormatted = Regex.Replace(tbInputFormatted, "\bI'm are\b", "I am")
                 tbInputFormatted = Regex.Replace(tbInputFormatted, "\bI'm said\b", "I said")
 
-                output = inputName + ", " + tbInputFormatted + "."
+                output = tbInputArgs(1) + ", " + tbInputFormatted + "."
                 boolResponse = True
 
                 ' ##### BETA FEATURE #####
@@ -347,13 +353,13 @@ Public Class frmMain
 
         lblReceivedInput.Text = tbInput.Text
 
-            ' Clear the input box
+        ' Clear the input box
 
-            tbInput.ResetText()
+        tbInput.ResetText()
 
-            pbLoading.Visible = False
+        pbLoading.Visible = False
 
-            Return True
+        Return True
 
     End Function
 

@@ -120,29 +120,6 @@
   <metadata name="btnExit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="lblChangelog.Text" xml:space="preserve">
-    <value>+ Added automatic feedback submissions. Go to Settings and hover over the setting for more information.
-
-+ Added commands (say "/help")
-
-+ Added a few grammatical fixes when you ask the A.I. to tell someone something
-
-+ Changed the name of the A.I.
-
-+ Changed the application icon
-
-+ Changed the title of all windows to accommodate the A.I. name changes  
-
-+ Changed the response text font
-
-+ Changed the changelogs text font
-
-+ Changed the feedback submission text font on the main application window
-
-+ Changed asking the A.I. to tell someone something into a beta feature
-
-+ Moved changelogs to its own menu</value>
-  </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

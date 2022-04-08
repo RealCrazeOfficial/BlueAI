@@ -92,10 +92,12 @@ Partial Class frmWhatsNew
         Me.lblChangelog.BackColor = System.Drawing.SystemColors.Control
         Me.lblChangelog.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblChangelog.Location = New System.Drawing.Point(-3, 0)
+        Me.lblChangelog.MaximumSize = New System.Drawing.Size(241, 750)
+        Me.lblChangelog.MinimumSize = New System.Drawing.Size(241, 224)
         Me.lblChangelog.Name = "lblChangelog"
-        Me.lblChangelog.Size = New System.Drawing.Size(241, 390)
+        Me.lblChangelog.Size = New System.Drawing.Size(241, 224)
         Me.lblChangelog.TabIndex = 11
-        Me.lblChangelog.Text = resources.GetString("lblChangelog.Text")
+        Me.lblChangelog.Text = "ERROR"
         '
         'Panel1
         '

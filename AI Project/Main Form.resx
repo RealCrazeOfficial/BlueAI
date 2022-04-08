@@ -1251,7 +1251,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>BlueAI - Build 0.3.3</value>
+    <value>BlueAI - Build 0.3.4</value>
   </data>
   <data name="&gt;&gt;tmrFeedbackSubmissionSuccess.Name" xml:space="preserve">
     <value>tmrFeedbackSubmissionSuccess</value>

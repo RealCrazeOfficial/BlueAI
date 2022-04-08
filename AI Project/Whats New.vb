@@ -6,12 +6,11 @@ Public Class frmWhatsNew
 
     Private Sub frmSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim changelogURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/AI-Solution/master/changelog"
-        Dim buildVersionURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/AI-Solution/master/build-version"
-        Dim client As WebClient = New WebClient()
+        Dim changelogURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/BlueAI/master/changelog"
+        Dim buildVersionURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/BlueAI/master/build-version"
 
-        Dim changelogText As StreamReader = New StreamReader(client.OpenRead(changelogURL))
-        Dim buildVersionText As StreamReader = New StreamReader(client.OpenRead(buildVersionURL))
+        Dim changelogText As New StreamReader(New WebClient().OpenRead(changelogURL))
+        Dim buildVersionText As New StreamReader(New WebClient().OpenRead(buildVersionURL))
 
         Dim changelog As String = changelogText.ReadToEnd
         Dim buildVersion As String = buildVersionText.ReadToEnd
