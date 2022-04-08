@@ -2,13 +2,17 @@
 
 + Added commands (say "/help")
 
++ Added 5 greeting variations to the A.I. library to improve detection of you saying hello
+
 + Added a few grammatical fixes when you ask the A.I. to tell someone something
+
++ Changed how the A.I. views parameters, so that finding word locations in a sentence is easier and simpler than ever
 
 + Changed the name of the A.I.
 
 + Changed the application icon
 
-+ Changed the title of all windows to accommodate the A.I. name changes  
++ Changed the title of all windows to accommodate the A.I. name changes
 
 + Changed the response text font
 
@@ -19,3 +23,5 @@
 + Changed asking the A.I. to tell someone something into a beta feature
 
 + Moved changelogs to its own menu
+
++ Fixed an issue where the changelog preview wouldn't auto-adjust the height of the scrollbar to accommodate larger changelogs
