@@ -124,6 +124,9 @@
   <data name="btnExit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
+  <data name="btnExit.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
     <value>397, 226</value>
@@ -157,7 +160,7 @@
     <value>Bottom, Left, Right</value>
   </data>
   <data name="tbInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 116</value>
+    <value>12, 114</value>
   </data>
   <data name="tbInput.Size" type="System.Drawing.Size, System.Drawing">
     <value>460, 20</value>
@@ -187,7 +190,7 @@
     <value>False</value>
   </data>
   <data name="lblPlaceholder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 119</value>
+    <value>13, 117</value>
   </data>
   <data name="lblPlaceholder.Size" type="System.Drawing.Size, System.Drawing">
     <value>446, 13</value>
@@ -254,6 +257,9 @@
   </metadata>
   <data name="btnSend.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btnSend.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="btnSend.Location" type="System.Drawing.Point, System.Drawing">
     <value>397, 139</value>
@@ -348,6 +354,9 @@
   <data name="btnChangelogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="btnChangelogs.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="btnChangelogs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -414,6 +423,9 @@
   <data name="btnSettings.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="btnSettings.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="btnSettings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -441,6 +453,9 @@
   <data name="&gt;&gt;btnSettings.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="lblFeedbackSubmission.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lblFeedbackSubmission.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 8.25pt</value>
   </data>
@@ -448,7 +463,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblFeedbackSubmission.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 139</value>
+    <value>13, 137</value>
   </data>
   <data name="lblFeedbackSubmission.Size" type="System.Drawing.Size, System.Drawing">
     <value>378, 23</value>
@@ -1251,7 +1266,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>BlueAI - Build 0.3.4</value>
+    <value>BlueAI - Build 0.3.5</value>
   </data>
   <data name="&gt;&gt;tmrFeedbackSubmissionSuccess.Name" xml:space="preserve">
     <value>tmrFeedbackSubmissionSuccess</value>

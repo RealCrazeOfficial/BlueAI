@@ -77,6 +77,18 @@ Namespace My
                 Me("feedbackSubmission") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Classic")>  _
+        Public Property selectedTheme() As String
+            Get
+                Return CType(Me("selectedTheme"),String)
+            End Get
+            Set
+                Me("selectedTheme") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

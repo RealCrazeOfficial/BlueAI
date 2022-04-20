@@ -43,8 +43,10 @@ Partial Class frmMain
         'btnExit
         '
         resources.ApplyResources(Me.btnExit, "btnExit")
+        Me.btnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(173, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(173, Byte), Integer))
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'tbInput
         '
@@ -64,6 +66,7 @@ Partial Class frmMain
         'lblResponse
         '
         resources.ApplyResources(Me.lblResponse, "lblResponse")
+        Me.lblResponse.BackColor = System.Drawing.SystemColors.Control
         Me.lblResponse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblResponse.Name = "lblResponse"
         Me.lblResponse.UseMnemonic = False
@@ -71,8 +74,10 @@ Partial Class frmMain
         'btnSend
         '
         resources.ApplyResources(Me.btnSend, "btnSend")
+        Me.btnSend.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.btnSend.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(173, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(173, Byte), Integer))
         Me.btnSend.Name = "btnSend"
-        Me.btnSend.UseVisualStyleBackColor = True
+        Me.btnSend.UseVisualStyleBackColor = False
         '
         'lblReceivedInput
         '
@@ -92,8 +97,10 @@ Partial Class frmMain
         'btnChangelogs
         '
         resources.ApplyResources(Me.btnChangelogs, "btnChangelogs")
+        Me.btnChangelogs.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.btnChangelogs.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(173, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(173, Byte), Integer))
         Me.btnChangelogs.Name = "btnChangelogs"
-        Me.btnChangelogs.UseVisualStyleBackColor = True
+        Me.btnChangelogs.UseVisualStyleBackColor = False
         '
         'pbUpdateIcon
         '
@@ -105,8 +112,10 @@ Partial Class frmMain
         'btnSettings
         '
         resources.ApplyResources(Me.btnSettings, "btnSettings")
+        Me.btnSettings.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(173, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(173, Byte), Integer))
         Me.btnSettings.Name = "btnSettings"
-        Me.btnSettings.UseVisualStyleBackColor = True
+        Me.btnSettings.UseVisualStyleBackColor = False
         '
         'lblFeedbackSubmission
         '

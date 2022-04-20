@@ -35,12 +35,15 @@ Partial Class frmWhatsNew
         '
         'btnExit
         '
+        Me.btnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(173, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(173, Byte), Integer))
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.Location = New System.Drawing.Point(397, 226)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 23)
         Me.btnExit.TabIndex = 1
         Me.btnExit.Text = "E&xit"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'lblVersionInfo
         '
@@ -56,10 +59,11 @@ Partial Class frmWhatsNew
         '
         'btnUpdate
         '
-        Me.btnUpdate.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.btnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
         Me.btnUpdate.Enabled = False
-        Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnUpdate.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(173, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(173, Byte), Integer))
+        Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnUpdate.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.btnUpdate.Location = New System.Drawing.Point(396, 194)
         Me.btnUpdate.Name = "btnUpdate"
@@ -93,7 +97,7 @@ Partial Class frmWhatsNew
         Me.lblChangelog.BackColor = System.Drawing.SystemColors.Control
         Me.lblChangelog.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblChangelog.Location = New System.Drawing.Point(-3, 0)
-        Me.lblChangelog.MaximumSize = New System.Drawing.Size(241, 750)
+        Me.lblChangelog.MaximumSize = New System.Drawing.Size(241, 1080)
         Me.lblChangelog.MinimumSize = New System.Drawing.Size(241, 224)
         Me.lblChangelog.Name = "lblChangelog"
         Me.lblChangelog.Size = New System.Drawing.Size(241, 224)

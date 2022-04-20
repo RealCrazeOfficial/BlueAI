@@ -6,15 +6,54 @@ Imports System.Text.RegularExpressions
 Imports System.Windows.Forms.Timer
 Imports System.Collections.Specialized
 
+
+
 Public Class frmMain
 
-    Private Const currentVersion As String = "034"
+    Private Const currentVersion As String = "035"
     Private Const rawVersionURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/BlueAI/master/version-raw"
     Private ReadOnly rawVersionText As New StreamReader(New WebClient().OpenRead(rawVersionURL))
     Private ReadOnly rawLatestVersion As Integer = rawVersionText.ReadToEnd
     Private updateNotified As Boolean = False
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Dim guiColor As Color
+        Dim labelBackColor As Color
+        Dim labelForeColor As Color
+        Dim buttonBackColor As Color
+        Dim buttonBorderColor As Color
+
+        If My.Settings.selectedTheme = "Classic" Then
+
+            guiColor = Color.FromName("Control")
+            labelBackColor = Color.FromName("Control")
+            labelForeColor = Color.FromName("ControlText")
+            buttonBackColor = Color.FromArgb(225, 225, 225)
+            buttonBorderColor = Color.FromArgb(173, 173, 173)
+
+        ElseIf My.Settings.selectedTheme = "Dark" Then
+
+            guiColor = Color.FromArgb(35, 35, 35)
+            labelBackColor = Color.FromArgb(45, 45, 45)
+            labelForeColor = Color.FromArgb(225, 225, 225)
+            buttonBackColor = Color.FromArgb(65, 65, 75)
+            buttonBorderColor = Color.FromArgb(60, 60, 70)
+
+        End If
+
+        Me.BackColor = guiColor
+        lblResponse.BackColor = labelBackColor
+        lblResponse.ForeColor = labelForeColor
+        lblReceivedInput.ForeColor = labelForeColor
+        btnSend.BackColor = buttonBackColor
+        btnSettings.BackColor = buttonBackColor
+        btnChangelogs.BackColor = buttonBackColor
+        btnExit.BackColor = buttonBackColor
+        btnSend.FlatAppearance.BorderColor = buttonBorderColor
+        btnSettings.FlatAppearance.BorderColor = buttonBorderColor
+        btnChangelogs.FlatAppearance.BorderColor = buttonBorderColor
+        btnExit.FlatAppearance.BorderColor = buttonBorderColor
 
         Dim buildVersionURL As String = "https://raw.githubusercontent.com/XGMCLOLCrazE/BlueAI/master/build-version"
 
@@ -39,6 +78,86 @@ Public Class frmMain
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
 
         Close()
+
+    End Sub
+
+    Private Sub btnExit_GotFocus(sender As Object, e As EventArgs) Handles btnExit.GotFocus
+
+        btnExit.FlatAppearance.BorderColor = Color.FromName("Highlight")
+
+    End Sub
+
+    Private Sub btnExit_LostFocus(sender As Object, e As EventArgs) Handles btnExit.LostFocus
+
+        If My.Settings.selectedTheme = "Dark" Then
+
+            btnExit.FlatAppearance.BorderColor = Color.FromArgb(60, 60, 70)
+
+        Else
+
+            btnExit.FlatAppearance.BorderColor = Color.FromArgb(173, 173, 173)
+
+        End If
+
+    End Sub
+
+    Private Sub btnSend_GotFocus(sender As Object, e As EventArgs) Handles btnSend.GotFocus
+
+        btnSend.FlatAppearance.BorderColor = Color.FromName("Highlight")
+
+    End Sub
+
+    Private Sub btnSend_LostFocus(sender As Object, e As EventArgs) Handles btnSend.LostFocus
+
+        If My.Settings.selectedTheme = "Dark" Then
+
+            btnSend.FlatAppearance.BorderColor = Color.FromArgb(60, 60, 70)
+
+        Else
+
+            btnSend.FlatAppearance.BorderColor = Color.FromArgb(173, 173, 173)
+
+        End If
+
+    End Sub
+
+    Private Sub btnSettings_GotFocus(sender As Object, e As EventArgs) Handles btnSettings.GotFocus
+
+        btnSettings.FlatAppearance.BorderColor = Color.FromName("Highlight")
+
+    End Sub
+
+    Private Sub btnSettings_LostFocus(sender As Object, e As EventArgs) Handles btnSettings.LostFocus
+
+        If My.Settings.selectedTheme = "Dark" Then
+
+            btnSettings.FlatAppearance.BorderColor = Color.FromArgb(60, 60, 70)
+
+        Else
+
+            btnSettings.FlatAppearance.BorderColor = Color.FromArgb(173, 173, 173)
+
+        End If
+
+    End Sub
+
+    Private Sub btnChangelogs_GotFocus(sender As Object, e As EventArgs) Handles btnChangelogs.GotFocus
+
+        btnChangelogs.FlatAppearance.BorderColor = Color.FromName("Highlight")
+
+    End Sub
+
+    Private Sub btnChangelogs_LostFocus(sender As Object, e As EventArgs) Handles btnChangelogs.LostFocus
+
+        If My.Settings.selectedTheme = "Dark" Then
+
+            btnChangelogs.FlatAppearance.BorderColor = Color.FromArgb(60, 60, 70)
+
+        Else
+
+            btnChangelogs.FlatAppearance.BorderColor = Color.FromArgb(173, 173, 173)
+
+        End If
 
     End Sub
 
@@ -117,6 +236,7 @@ Public Class frmMain
         Dim noInputResponse() As String = {
             "You didn't say anything.",
             "You didn't type anything.",
+            "You didn't write anything.",
             "Did you say something?",
             "You left the text box blank."
         }
@@ -164,7 +284,7 @@ Public Class frmMain
         ' Format the input to lowercase letters so that the AI can easily interprete the input
 
         tbInputFormatted = tbInput.Text.ToLower()
-        tbInputFormatted = Regex.Replace(tbInputFormatted, "[`~!@#$^&()_{}|;:'<.>?]", String.Empty)
+        tbInputFormatted = Regex.Replace(tbInputFormatted, "/[^a-zA-Z0-9 ]/g", String.Empty)
         tbInputArgs = tbInputFormatted.Split(" ")
 
         ' Main AI Function
@@ -176,14 +296,17 @@ Public Class frmMain
 
         If tbInputFormatted.Contains("what") Then
             If tbInputFormatted.Contains("time") Then
-                output = timeResponse(Rnd.Next(0, 3))
+                output = timeResponse(Math.Floor(Rnd.Next(0, timeResponse.Length)))
                 boolResponse = True
             End If
         ElseIf tbInputFormatted.Contains("can you") Then
-            If Rnd.Next(0, 3) = 1 Then
+            If tbInputFormatted.Contains("time") Then
+                output = timeResponse(Math.Floor(Rnd.Next(0, timeResponse.Length)))
+                boolResponse = True
+            ElseIf Rnd.Next(0, abilityResponse.Length) = 1 Then
                 tbInputFormatted = Regex.Replace(tbInputFormatted, "\bcan you\b", String.Empty)
                 tbInputFormatted = Regex.Replace(tbInputFormatted, "\bme\b", "y0u")
-                If tbInputFormatted.Contains("you will") Or tbInputFormatted.Contains("you know") Then
+                If tbInputFormatted.Contains("you will") Or tbInputFormatted.Contains("you know") Or tbInputFormatted.Contains("you can") Or tbInputFormatted.Contains("you might") Then
                     tbInputFormatted = Regex.Replace(tbInputFormatted, "\byou\b", "I")
                 Else
                     tbInputFormatted = Regex.Replace(tbInputFormatted, "\byoure\b", "I'm")
@@ -196,14 +319,18 @@ Public Class frmMain
                 output = abilityResponse(0) + tbInputFormatted + " yet."
                 boolResponse = True
             Else
-                output = abilityResponse(Rnd.Next(2, 3))
+                output = abilityResponse(Math.Floor(Rnd.Next(0, abilityResponse.Length)))
                 boolResponse = True
             End If
         ElseIf tbInputFormatted.Contains("tell") And Not tbInputFormatted.StartsWith("/") Then
+            If tbInputFormatted.Contains("time") Then
 
-            ' ##### BETA FEATURE #####
+                output = timeResponse(Math.Floor(Rnd.Next(0, timeResponse.Length)))
+                boolResponse = True
 
-            If My.Settings.betaTell = True Then
+            ElseIf My.Settings.betaTell = True Then
+
+                ' ##### BETA FEATURE #####
 
                 tbInputFormatted = Regex.Replace(tbInputFormatted, "\b" + tbInputArgs(1) + " \b", String.Empty)
                 tbInputFormatted = Regex.Replace(tbInputFormatted, "\btell \b", String.Empty)
@@ -245,7 +372,7 @@ Public Class frmMain
 
             End If
         ElseIf greetingInput.Contains(tbInputFormatted) Then
-            output = greetingResponse(Rnd.Next(0, 2))
+            output = greetingResponse(Math.Floor(Rnd.Next(0, greetingResponse.Length)))
             boolResponse = True
         ElseIf tbInputFormatted.StartsWith("/") Then
 
@@ -291,7 +418,7 @@ Public Class frmMain
 
         If boolResponse = False Then
             If tbInputFormatted = "" Then
-                output = noInputResponse(Rnd.Next(0, 3))
+                output = noInputResponse(Math.Floor(Rnd.Next(0, noInputResponse.Length)))
             Else
 
                 If My.Settings.feedbackSubmission = True And My.Computer.Network.IsAvailable Then
@@ -328,13 +455,13 @@ Public Class frmMain
 
                 End If
 
-                output = unknownResponse(Rnd.Next(0, 4))
+                output = unknownResponse(Math.Floor(Rnd.Next(0, unknownResponse.Length)))
 
             End If
 
         End If
 
-        ' The AI's response
+        ' The AI's Response
 
         lblResponse.Text = output
 
