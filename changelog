@@ -2,6 +2,8 @@
 
 + Added commands (say "/help")
 
++ Added dark mode
+
 + Added 5 greeting variations to the A.I. library to improve detection of you saying hello
 
 + Added a few grammatical fixes when you ask the A.I. to tell someone something
@@ -13,6 +15,8 @@
 + Changed the application icon
 
 + Changed the title of all windows to accommodate the A.I. name changes
+
++ Changed the Settings layout
 
 + Changed the response text font
 
